@@ -1,5 +1,10 @@
+// Overall Elements
 html {
     font-family: 'LatoLatinWeb';
+}
+
+body {
+    margin: 0;
 }
 
 h1 {
@@ -61,5 +66,50 @@ input {
     &:focus
     {
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+.fa-solid {
+    font-style: normal;
+}
+
+// Login Page
+button#login-button {
+    padding: 0;
+    height: 3rem;
+    width: 3rem;
+    font-size: 16px;
+    border-radius: 50%;
+}
+
+.login {
+    height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        width: 14rem;
+        margin-bottom: 2rem;
+    }
+
+    form {
+        width: 100%;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+
+
+        input {
+            margin-bottom: 1rem;
+            width: 60%;
+            min-width: 14rem;
+            max-width: 22rem;
+
+            &:last-of-type {
+                margin-bottom: calc(1rem + 6px);
+            }
+        }
     }
 }

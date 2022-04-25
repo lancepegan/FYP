@@ -11,19 +11,35 @@
     <link rel="stylesheet/less" type="text/css" href="./less/solid.less"/>
     <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
     <link rel="stylesheet" href="latolatinfonts.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+    <!-- For Demo Only -->
+    <script>
+
+    function stimulateLogin()
+    {
+        var Username = $("#Username").val();
+        var Password = $("#Password").val();
+        if (Username == "admin" && Password == "test"){
+            window.location = "./admin/dashboard.html";    
+        }
+        else
+        {
+            alert("Invalid Username or Password.");
+        }
+    };
+    </script>
+
 </head>
 <body>
     <div class="login">
         <div id="login-logo"></div>
-        <form action="#" method="#" id="login-form">
+        <form action="" method="post" id="login-form">
             <input type="text" name="Username" id="Username" placeholder="Username">
             <input type="password" name="Password" id="Password" placeholder="Password">
         </form>
-   
-        <a href="./admin/dashboard.html">
-            <button id="login-button"><i class="fa-solid fa-arrow-right"></i></button>
-            <!-- <button id="login-button" type="submit" form="login-form"><i class="fa-solid fa-arrow-right"></i></button> -->
-        </a>
+        <!-- For Demo Only, To be changed -->
+        <button id="login-button" onclick="stimulateLogin()"><i class="fa-solid fa-arrow-right"></i></button>
     </div>  
 </body>
 </html>

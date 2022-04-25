@@ -25,9 +25,10 @@ p {
     font-size: 1em;
 }
 
-button {
+button, .button {
     font-family: 'LatoLatinWeb';
     font-size: 14px;
+    font-weight: bold;
     border: none;
     padding: 10px 20px;
     border-radius: 32px;
@@ -50,6 +51,18 @@ button {
     &:active {
         background-color: #fb8d00;
         transform: translateY(0px);
+    }
+}
+
+.button-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+
+    i {
+        padding-right: 6px;
+        font-size: 10px;
     }
 }
 
@@ -89,9 +102,14 @@ button#login-button {
     justify-content: center;
     align-items: center;
 
-    img {
+    div#login-logo {
+        height: 8.5rem;
         width: 14rem;
         margin-bottom: 2rem;
+        background-image: url("./images/Logo.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
     }
 
     form {
@@ -109,6 +127,110 @@ button#login-button {
 
             &:last-of-type {
                 margin-bottom: calc(1rem + 6px);
+            }
+        }
+    }
+}
+
+// Admin Dashboard
+.admin-dashboard {
+    display: flex;
+    flex-flow: row;
+    height: 100vh;
+
+    .admin-nav {
+        display: flex;
+        padding: 28vh 0;
+        flex-flow: column;
+        align-items: center;
+        flex: 1;
+        background-color: #eeeeeeaa;
+        border-radius: 0 25px 25px 0;
+        box-shadow: 0px 10px 14px rgba(110, 110, 110, 0.4);
+
+        div#logo {
+            height: 5.5rem;
+            width: 8rem;
+            margin-bottom: 2rem;
+            background-image: url("./images/Logo.png");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .button-icon {
+            width: 4rem;
+            margin-bottom: 1rem;
+
+            // Logout Button
+            &:last-of-type {
+                background-color: #d11a2a;
+                color: white;
+                margin-bottom: 0;
+                margin-top: auto;
+
+                &:hover {
+                    background-color: #f03949;
+                    box-shadow: 0px 10px 14px rgba(255, 151, 162, 0.4);
+                    color: #fff;
+                    transform: translateY(-6px);
+                }
+            
+                &:active {
+                    background-color: #d11a2a;
+                    transform: translateY(0px);
+                }
+            }
+        }
+    }
+
+}
+
+.admin-home {
+    display: flex;
+    flex-flow: column;
+    flex: 3;
+    margin: 10vh 8rem;
+
+    div {
+        &:first-of-type {
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            align-items: center;
+
+            input {
+                width: 60%;
+            }
+        }
+
+        &:last-of-type {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: space-between;
+            margin-top: 30px;
+
+            a {
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                width: calc(19%);
+                padding: 30px 0;
+                border: 1px solid #E5E5E5;
+                box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
+                border-radius: 20px;
+                transition: all 0.3s ease 0s;
+                cursor: pointer;
+
+                img {
+                    width: 5rem;
+                    border-radius: 50%;
+                    margin-bottom: 1rem;
+                }
+
+                &:hover {
+                    transform: translateY(-6px);
+                }
             }
         }
     }

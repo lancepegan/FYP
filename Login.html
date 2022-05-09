@@ -12,24 +12,6 @@
     <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
     <link rel="stylesheet" href="latolatinfonts.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    
-    <!-- For Demo Only, Remove during PHP development -->
-    <script>
-
-    function stimulateLogin()
-    {
-        var Username = $("#Username").val();
-        var Password = $("#Password").val();
-        if (Username == "admin" && Password == "test"){
-            window.location = "./admin/dashboard.html";    
-        }
-        else
-        {
-            alert("Invalid Username or Password.");
-        }
-    };
-    </script>
-
 </head>
 <body>
     <div class="login">
@@ -38,8 +20,7 @@
             <input type="text" name="Username" id="Username" placeholder="Username">
             <input type="password" name="Password" id="Password" placeholder="Password">
         </form>
-        <!-- For Demo Only, Change for PHP -->
-        <button id="login-button" onclick="stimulateLogin()"><i class="fa-solid fa-arrow-right"></i></button>
+        <button id="login-button"><i class="fa-solid fa-arrow-right"></i></button>
     </div>  
 </body>
 </html>

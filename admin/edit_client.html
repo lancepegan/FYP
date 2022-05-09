@@ -19,22 +19,18 @@
             <a href="dashboard.html" class="button button-icon"><i class="fa-solid fa-house"></i>Home</a>
             <a class="button button-icon"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
         </div>
-        <div class="admin-selected-client">
+        <div class="admin-edit-client">
             <div class="admin-title">
                 <a class="button button-back" href="dashboard.html"><i class="fa-solid fa-arrow-left"></i></a>
-                <h1>Viewing Client Name</h1>
+                <h1>Edit Client</h1>
                 <p></p>
             </div>
             <div>
-                <div>
-                    <img src="../images/Facebook.png" alt="#">
-                    <p>Client Name</p>
-                    <a href="edit_client.html" class="button">Edit</a>
-                </div>
-                <div>
-                    <a href="client_dashboard.html" class="button button-arrow">Go to Dashboard <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="manage_users.html" class="button button-arrow">Manage Users <i class="fa-solid fa-arrow-right"></i></a>    
-                </div>
+                <form action="#" id="add-client">
+                    <input type="text" name="Name" id="Name" placeholder="Name" disabled>
+                    <input type="text" name="Facebook-API" id="Facebook-API" placeholder="Facebook API" disabled>
+                </form>
+                <button type="submit" form="edit-client">Edit Client</button>
             </div>
         </div>
     </div>  

@@ -25,6 +25,11 @@ p {
     font-size: 1em;
 }
 
+a {
+    text-decoration: none;
+    color: black;
+}
+
 button, .button {
     font-family: 'LatoLatinWeb';
     font-size: 14px;
@@ -36,6 +41,7 @@ button, .button {
     display: inline-block;
     text-decoration: none;
     cursor: pointer;
+    color: black;
     background-color: #fff;
     box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
     outline: none;
@@ -63,6 +69,32 @@ button, .button {
     i {
         padding-right: 6px;
         font-size: 10px;
+    }
+}
+
+.button-back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem !important;
+
+    i {
+        text-align: center;
+        font-size: 16px;
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.button-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 90%;
+    padding: 16px 20px;
+
+    i {
+        margin-left: auto;
     }
 }
 
@@ -184,14 +216,16 @@ button#login-button {
         }
     }
 
+    .admin-nav + div {
+        display: flex;
+        flex: 3;
+        margin: 10vh 8rem;
+        flex-flow: column;
+    }
+
 }
 
 .admin-home {
-    display: flex;
-    flex-flow: column;
-    flex: 3;
-    margin: 10vh 8rem;
-
     div {
         &:first-of-type {
             display: flex;
@@ -230,6 +264,151 @@ button#login-button {
 
                 &:hover {
                     transform: translateY(-6px);
+                }
+            }
+        }
+    }
+}
+
+.admin-title {
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: flex-start;
+
+    a {
+        margin-right: auto;
+    }
+
+    p {
+        margin-left: auto;
+
+    }
+}
+
+.admin-add-client, .admin-add-user, .admin-edit-user {
+    div:last-of-type {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        
+        form {
+            display: flex;
+            flex-flow: column;
+            margin-top: 2rem;
+            width: 90%;
+
+            input {
+                margin-bottom: 2rem;
+            }
+        }
+
+        button {
+            margin-top: auto;
+        }
+    }
+}
+
+.admin-selected-client {
+    div:last-of-type {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        height: 100%;
+        
+        div {
+            &:first-of-type {
+                flex: 2;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 8rem;
+                    height: 8rem;
+                    border-radius: 16rem;
+                }
+    
+                p {
+                    font-weight: bold;
+                    margin-bottom: 0.75rem;
+                }
+            }
+
+            &:last-of-type {
+                flex: 1;
+                display: flex;
+                flex-flow: column;
+                justify-content: flex-end;
+                width: calc(90% - 40px);
+                height: 100%;
+
+                a {
+                    width: 100%;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+    } 
+}
+
+.admin-manage-users {
+    .admin-title {
+        margin-bottom: 1.25rem;
+    }
+
+    div:last-of-type {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        margin-top: 1rem;
+        height: 100%;
+
+        a {
+            margin-bottom: 1.25rem;
+        }
+
+        .temp-disabled {
+            pointer-events: none;
+            background-color: #efefef;
+        }
+
+        a:last-of-type {
+            margin-top: auto;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.admin-edit-user {
+    div:last-of-type {
+        div {
+            display: flex;
+            flex-flow: row;
+
+            button {
+                &:first-of-type {
+                    margin-right: 1.5rem;
+                }
+
+                &:last-of-type {
+                    background-color: #d11a2a;
+                    color: white;
+                    margin-bottom: 0;
+                    margin-top: auto;
+
+                    &:hover {
+                        background-color: #f03949;
+                        box-shadow: 0px 10px 14px rgba(255, 151, 162, 0.4);
+                        color: #fff;
+                    }
+                
+                    &:active {
+                        background-color: #d11a2a;
+                    }
                 }
             }
         }

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin - Dashboard</title>
+    <title>Admin - Add Client</title>
     <link rel="stylesheet/less" type="text/css" href="../styles.less"/>
     <link rel="stylesheet/less" type="text/css" href="../less/fontawesome.less"/>
     <link rel="stylesheet/less" type="text/css" href="../less/regular.less"/>
@@ -17,21 +17,21 @@
         <div class="admin-nav">
             <div id="logo"></div>
             <a class="button button-icon"><i class="fa-solid fa-house"></i>Home</a>
-            <!-- For Demo Purpose Only -->
-            <a class="button button-icon" href="../Login.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+            <a class="button button-icon"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
         </div>
-        <div class="admin-home">
-            <div>
-                <h1>Home</h1>
-                <input type="text" placeholder="Search">
-                <a class="button button-icon" href="add_client.html"><i class="fa-solid fa-user-plus"></i>Add Client</a>
+        <div class="admin-add-client">
+            <div class="admin-title">
+                <a class="button button-back" href="dashboard.html"><i class="fa-solid fa-arrow-left"></i></a>
+                <h1>Add New Client</h1>
+                <p></p>
             </div>
-             <div>
-                 <a href="selected.html">
-                     <img src="../images/Facebook.png" alt="#">
-                     <p>Client Name</p>
-                 </a>
-             </div>
+            <div>
+                <form action="#" id="add-client">
+                    <input type="text" name="Name" id="Name" placeholder="Name">
+                    <input type="text" name="Facebook-API" id="Facebook-API" placeholder="Facebook API">
+                </form>
+                <button type="submit" form="add-client">Add Client</button>
+            </div>
         </div>
     </div>  
 </body>

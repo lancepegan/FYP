@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Add Client</title>
+    <link rel="stylesheet/less" type="text/css" href="../styles.less"/>
+    <link rel="stylesheet/less" type="text/css" href="../less/fontawesome.less"/>
+    <link rel="stylesheet/less" type="text/css" href="../less/regular.less"/>
+    <link rel="stylesheet/less" type="text/css" href="../less/solid.less"/>
+    <script src="https://cdn.jsdelivr.net/npm/less@4" ></script>
+    <link rel="stylesheet" href="../latolatinfonts.css">
+</head>
+<body>
+    <div class="admin-dashboard">
+        <div class="admin-nav">
+            <div id="logo"></div>
+            <a class="button button-icon"><i class="fa-solid fa-house"></i>Home</a>
+            <a class="button button-icon"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+        </div>
+        <div class="admin-edit-user">
+            <div class="admin-title">
+                <a class="button button-back" href="manage_users.html"><i class="fa-solid fa-arrow-left"></i></a>
+                <h1>Edit User</h1>
+                <p></p>
+            </div>
+            <div>
+                <form action="#" id="add-client">
+                    <input type="text" name="Username" id="Username" placeholder="Username" disabled>
+                    <input type="text" name="Email" id="Email" placeholder="Email" disabled>
+                    <input type="password" name="Password" id="Password" placeholder="Password" disabled>
+                    <input type="text" name="Client" id="Client" placeholder="Client/Company Name" disabled>
+                </form>
+                <div>
+                    <button type="submit" form="add-client">Edit User</button>
+                    <button type="submit" form="add-client">Remove User</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+</body>
+</html>
